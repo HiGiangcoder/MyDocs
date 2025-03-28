@@ -1,0 +1,220 @@
+site_name: My Documentation
+
+extra_javascript:
+  - assets/popup.js
+extra_css:
+  - assets/extra.css
+
+theme:
+  name: 'material'
+
+  features:  
+    - navigation.tabs        # Hiển thị thanh bên trên
+    - navigation.tabs.sticky # Giữ thanh trên cố định khi cuộn
+    # - navigation.sections    # Cho phép các mục cha có con
+    # - toc.integrate          # Hợp nhất mục lục bên phải vào sidebar
+    - navigation.instant     # Load nhanh không tải lại trang
+    - navigation.path        # Hiển thị đường dẫn của trang
+    - navigation.indexes     # Cho phép mở rộng các mục con
+    # - navigation.expand      # (Comment dòng này nếu muốn mặc định thu nhỏ)
+    - navigation.top         # Nút trở lên đầu
+    - navigation.tracking    # Theo dõi mục đang đọc
+ 
+  palette:
+    - scheme: default  # Light Mode
+      primary: indigo
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+
+    - scheme: slate  # Dark Mode
+      primary: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  font:
+    text: Merriweather 
+    code: JetBrains Mono
+
+
+markdown_extensions:
+  - pymdownx.tasklist
+      # collapse: true  # Đảm bảo các mục trong <details> không tự mở
+
+  - admonition  # Hộp ghi chú
+  - pymdownx.details  # Mở rộng ghi chú
+  - pymdownx.superfences  # Hỗ trợ code block nâng cao
+  - pymdownx.highlight  # Làm đẹp code
+  - pymdownx.inlinehilite  # Code inline
+  - pymdownx.snippets  # Chèn file markdown
+  - pymdownx.tabbed  # Tab trong tài liệu
+  - pymdownx.arithmatex:
+      generic: true
+
+extra_javascript:
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+plugins:
+  - awesome-pages
+  # - mkdocs-jupyter:
+  #     execute: false  # Để không chạy lại notebook khi hiển thị
+  - search
+  - include-markdown
+  # - pdf-export
+  # - with-pdf
+      # cover_title: Tài liệu tạo bởi Nguyễn Trường Giang
+  - minify:
+      minify_html: true
+  - glightbox
+
+nav:
+  - Home: 
+    - Home: index.md
+    - About: about.md
+
+  - Kiến thức lập trình:
+    - Các kiến trúc, mô hình AI và các kĩ thuật:
+      - Các kiến thức cần thiết: Learning/AI_Model/essential/essential.md
+      - Lenet-5:
+        - Overview: Learning/AI_Model/lenet/lenet5.md
+        - Tutorial part 1: Learning/AI_Model/lenet/lenetpart1.md
+        - Tutorial part 2: Learning/AI_Model/lenet/lenetpart2.md
+        - Lenet-5 (Final Project 1): Learning/AI_Model/lenet/Lenet5_MNIST.md
+      - UNet: 
+        - Unet tutorial: Learning/AI_Model/unet/unet.md
+        - UNet (Final Project 2): Learning/AI_Model/unet/unet_model.md
+      - Transformer:
+        - Transfomer Tutorial: Learning/AI_Model/Transformer/tutorial.md
+      - ViT:
+        - ViT Tutorial: Learning/AI_Model/ViT/Tutorial_baseline.md
+
+    - Python:
+      - Numpy 1: Learning/Python/Numpy_1.md
+      - Numpy 2: Learning/Python/Numpy_2.md
+      - Pandas: Learning/Python/Pandas.md
+      - Pandas exercise 1: Learning/Python/Python_Pandas_exercise1.md
+      - Pandas 2: Learning/Python/Pandas2.md
+      - Pandas exercise 2: Learning/Python/Python_Pandas_exercise2.md
+      - Pandas Join Combine: Learning/Python/Pandas_Join_Combine.md
+
+    - PyTorch:
+      - 0 Pytorch Fundamentals (ipynb): Learning/Pytorch/00_pytorch_fundamentals.md
+      - 0 Deep learning fundamentals (pdf): Learning/Pytorch/00_pytorch_and_deep_learning_fundamentals.pdf
+      - 1 Pytorch workflow (ipynb): Learning/Pytorch/01_pytorch_workflow.md
+      - 1 Pytorch workflow (pdf): Learning/Pytorch/01_pytorch_workflow.pdf
+      - 2 classification (ipynb): Learning/Pytorch/02_pytorch_classification.md
+      - 3 Computer vision (ipynb): Learning/Pytorch/03_pytorch_computer_vision.md
+      - 3 Compupter vision (pdf): Learning/Pytorch/03_pytorch_computer_vision.pdf
+      - 4 Custom datasets (pdf): Learning/Pytorch/04_pytorch_custom_datasets.md
+      - 5 Going moduler (pdf): Learning/Pytorch/05_pytorch_going_modular.pdf
+      - 6 Transfer learning (ipynb): Learning/Pytorch/06_pytorch_transfer_learning.md
+      - 6 Transfer learning (pdf): Learning/Pytorch/06_pytorch_transfer_learning.pdf
+      - 7 Experiment tracking (ipynb): Learning/Pytorch/07_pytorch_experiment_tracking.md
+      - 7 Experiment tracking (pdf): Learning/Pytorch/07_pytorch_experiment_tracking.pdf
+      - 8 Paper replicating (ipynb): Learning/Pytorch/08_pytorch_paper_replicating.md
+      - 8 Paper replicating (pdf): Learning/Pytorch/08_pytorch_paper_replicating.pdf
+      - 9 Model deployment(pdf): Learning/Pytorch/09_pytorch_model_deployment.pdf
+
+    - Tensorflow:
+      - 0 Tensorflow fundamentals: Learning/Tensorflow/00_tensorflow_fundamentals.md
+      - 1 Neural network regression: Learning/Tensorflow/01_neural_network_regression_in_tensorflow.md
+      - 2 Neural network classification: Learning/Tensorflow/02_neural_network_classification_in_tensorflow.md
+      - 4 Transfer learning: Learning/Tensorflow/04_transfer_learning_in_tensorflow_part_1_feature_extraction.md
+      - 10 Time series forecasting: Learning/Tensorflow/10_time_series_forecasting_in_tensorflow.md
+
+
+    - OOP Practice: Learning/OOP_Practice.md
+
+    - Visualization: Learning/Visualization.md
+
+  - Môn học:
+    - Xác suất thống kê:
+      - Bài tập về nhà buổi 2: Subject/XSTK/Exercise2/homework.md
+      - Bài tập về nhà buổi 3: Subject/XSTK/Exercise3/homework.md
+    - DSA:
+      - Bài tập về nhà buổi 1: Subject/DSA/Exercise1/homework.md
+      # - Bài tập về nhà buổi 2: Subject/DSA/Exercise2/homework.md
+      # - Bài tập về nhà buổi 3: Subject/DSA/Exercise3/homework.md
+
+  - CP-Problem: 
+    - General: Problem/general.md
+    - COCI 2006 2007:
+      - Overview: Problem/coci0607/Overview.md
+      
+      - Contest 1:
+        - MODULO: Problem/coci0607/Contest1/P1_MODULO.md
+        - HERMAN: Problem/coci0607/Contest1/P2_HERMAN.md
+        - OKVIRI: Problem/coci0607/Contest1/P3_OKVIRI.md
+        - SLIKAR: Problem/coci0607/Contest1/P4_SLIKAR.md
+        - BOND: Problem/coci0607/Contest1/P5_BOND.md
+        - DEBUG: Problem/coci0607/Contest1/P6_DEBUG.md
+      - Contest 2: 
+        - R2: Problem/coci0607/Contest2/P1_R2.md
+        - ABC: Problem/coci0607/Contest2/P2_ABC.md
+        - KOLONE: Problem/coci0607/Contest2/P3_KOLONE.md
+        - SJECISTA: Problem/coci0607/Contest2/P4_SJECISTA.md
+        - STOL: Problem/coci0607/Contest2/P5_STOL.md
+        - STRAZA: Problem/coci0607/Contest2/P6_STRAZA.md
+      - Contest 3:
+        - PATULJCI: Problem/coci0607/Contest3/P1_PATULJCI.md
+        - NPUZZLE: Problem/coci0607/Contest3/P2_NPUZZLE.md
+        - TROJKE: Problem/coci0607/Contest3/P3_TROJKE.md
+        - TENKICI: Problem/coci0607/Contest3/P4_TENKICI.md
+        - BICIKLI: Problem/coci0607/Contest3/P5_BICIKLI.md
+        - LISTA: Problem/coci0607/Contest3/P6_LISTA.md
+      - Contest 4:
+        - SIBICE: Problem/coci0607/Contest4/P1_Sibice.md
+        - SKENER: Problem/coci0607/Contest4/P2_Skener.md
+        - PRSTENI: Problem/coci0607/Contest4/P3_Prsteni.md
+        - ZBRKA: Problem/coci0607/Contest4/P4_Zbrka.md
+        - JOGURT: Problem/coci0607/Contest4/P5_Jogurt.md
+        - ISPITI: Problem/coci0607/Contest4/P6_Ispiti.md
+      - Contest 5:
+        - TRIK: Problem/coci0607/Contest5/P1_Trik.md
+        - NATRIJ: Problem/coci0607/Contest5/P2_Natrij.md  
+        - TENIS: Problem/coci0607/Contest5/P3_Tenis.md
+        - LIGA: Problem/coci0607/Contest5/P4_Liga.md
+        - IVANA: Problem/coci0607/Contest5/P5_Ivana.md
+        - DVAPUT: Problem/coci0607/Contest5/P6_Dvaput.md
+      - Contest 6:
+        - PRASE: Problem/coci0607/Contest6/P1_PRASE.md
+        - MAGIJA: Problem/coci0607/Contest6/P2_MAGIJA.md
+        - MARATON: Problem/coci0607/Contest6/P3_MARATON.md
+        - KAMEN: Problem/coci0607/Contest6/P4_KAMEN.md
+        - V: Problem/coci0607/Contest6/P5_V.md
+        - PROSTOR: Problem/coci0607/Contest6/P6_PROSTOR.md
+      - Regional:
+        - BARD: Problem/coci0607/Regional/P1_BARD.md
+        - TETRIS: Problem/coci0607/Regional/P2_TETRIS.md
+        - CIRCLE: Problem/coci0607/Regional/P4_CIRCLE.md
+      - Croatian Olympiad: 
+        - PATRIK: Problem/coci0607/Olympiad/P1_PATRIK.md
+        - POLICIJA: Problem/coci0607/Olympiad/P2_POLICIJA.md
+        - SABOR: Problem/coci0607/Olympiad/P3_SABOR.md
+    - COCI 2007 2008:
+      - Overview: Problem/coci0708/Overview.md
+      - Contest 1: 
+        - CETVRTA: Problem/coci0708/Contest1/P1_CETVRTA.md
+        - PEG: Problem/coci0708/Contest1/P2_PEG.md
+        - PRINOVA: Problem/coci0708/Contest1/P3_PRINOVA.md
+        - ZAPIS: Problem/coci0708/Contest1/P4_ZAPIS.md
+        - SREDNJI: Problem/coci0708/Contest1/P5_SREDNJI.md
+        - STAZA: Problem/coci0708/Contest1/P6_STAZA.md
+      - Contest 4:
+        - CIRCLE: Problem/coci0708/Contest4/P1_CIRCLE.md
+        - VECI: Problem/coci0708/Contest4/P2_VECI.md
+        - LEKTIRA: Problem/coci0708/Contest4/P3_LEKTIRA.md
+        - MUZICARI: Problem/coci0708/Contest4/P4_MUZICARI.md
+        - POKLON: Problem/coci0708/Contest4/P5_POKLON.md
+        - KOCKE: Problem/coci0708/Contest4/P6_KOCKE.md
+      - Contest 6:
+        - PARKING: Problem/coci0708/Contest6/P1_PARKING.md
+        - SEMAFORI: Problem/coci0708/Contest6/P2_SEMAFORI.md
+        - GRANICA: Problem/coci0708/Contest6/P3_GRANICA.md
+        - GEORGE: Problem/coci0708/Contest6/P4_GEORGE.md
+        - PRINCEZA: Problem/coci0708/Contest6/P5_PRINCEZA.md
+        - CESTARINE: Problem/coci0708/Contest6/P6_CESTARINE.md
+
+
+  - Other: other/other.md
